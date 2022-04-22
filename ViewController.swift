@@ -46,8 +46,10 @@ extension ViewController {
 It's a must learn for
 football fans!
 """)
+        let halaman3 = intro3ViewController(textImage: "pitch", textLabel: "Try it out for yourself!")
         pages.append(halaman1)
         pages.append(halaman2)
+        pages.append(halaman3)
         setViewControllers([pages[index]], direction: .forward, animated: false, completion: nil)
         
 //        pageSlides.addTarget(self, action: #selector(<#T##@objc method#>), for: .valueChanged)
