@@ -2,12 +2,13 @@
 //  File.swift
 //  LearnTactics
 //
-//  Created by Rizky Maulana on 22/04/22.
+//  Created by Rizky Maulana on 25/04/22.
 //
 
 import Foundation
 import UIKit
-class intro3ViewController: UIViewController {
+
+class Final: UIViewController {
     let pitchImage = UIImageView()
     let titleLabel = UILabel()
     let subLabel = UILabel()
@@ -38,7 +39,8 @@ class intro3ViewController: UIViewController {
         return x
     }
 }
-extension intro3ViewController{
+
+extension Final{
     func styleIntro(){
         pitchImage.contentMode = .scaleAspectFit
         pitchImage.translatesAutoresizingMaskIntoConstraints = false
@@ -51,7 +53,8 @@ extension intro3ViewController{
         subLabel.lineBreakMode = .byWordWrapping
         subLabel.numberOfLines = 0
         subLabel.textAlignment = .center
-
+        subLabel.heightAnchor.constraint(equalToConstant: 400).isActive = true
+        subLabel.widthAnchor.constraint(equalToConstant: 250).isActive = true
     }
     func setupIntro(){
         let p1 = createPieces()
@@ -82,38 +85,36 @@ extension intro3ViewController{
         view.addSubview(p11)
         
         pitchImage.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        pitchImage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 25).isActive = true
-//        pitchImage.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
-        pitchImage.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -0).isActive = true
-        pitchImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
+        pitchImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        
         titleLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor,constant: -40).isActive = true
         titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -150).isActive = true
         
-        subLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10).isActive = true
-        subLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -210).isActive = true
+        subLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant:450).isActive = true
+        subLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         
         p1.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 250).isActive = true
-        p1.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,constant: -80).isActive = true
+        p1.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,constant: -250).isActive = true
         
-        p2.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 50).isActive = true
-        p2.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,constant: -250).isActive = true
+        p2.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 250).isActive = true
+        p2.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,constant: -300).isActive = true
         
-        p3.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 175).isActive = true
-        p3.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,constant: -180).isActive = true
-        p4.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 325).isActive = true
-        p4.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,constant: -180).isActive = true
-        p5.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 460).isActive = true
-        p5.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,constant: -250).isActive = true
-        p6.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 175).isActive = true
-        p6.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,constant: -400).isActive = true
-        p7.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 325).isActive = true
-        p7.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,constant: -400).isActive = true
-        p8.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 50).isActive = true
+        p3.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 250).isActive = true
+        p3.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,constant: -350).isActive = true
+        p4.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 250).isActive = true
+        p4.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,constant: -400).isActive = true
+        p5.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 250).isActive = true
+        p5.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,constant: -450).isActive = true
+        p6.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 250).isActive = true
+        p6.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,constant: -500).isActive = true
+        p7.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 250).isActive = true
+        p7.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,constant: -550).isActive = true
+        p8.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 250).isActive = true
         p8.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,constant: -600).isActive = true
-        p9.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 460).isActive = true
-        p9.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,constant: -600).isActive = true
+        p9.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 250).isActive = true
+        p9.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,constant: -650).isActive = true
         p10.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 250).isActive = true
-        p10.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,constant: -650).isActive = true
+        p10.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,constant: -700).isActive = true
         p11.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 250).isActive = true
         p11.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,constant: -750).isActive = true
         
@@ -141,5 +142,3 @@ extension intro3ViewController{
     }
     
 }
-// MARK: - Touches
-

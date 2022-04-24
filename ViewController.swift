@@ -28,6 +28,7 @@ class ViewController: UIPageViewController {
         view.backgroundColor = UIColor(red: 247/255, green: 248/255, blue: 241/255, alpha: 1)
         setupPageView()
         setupAccessories()
+        self.navigationController?.navigationBar.isHidden = true
         // Do any additional setup after loading the view.
     }
     
@@ -46,10 +47,25 @@ extension ViewController {
 It's a must learn for
 football fans!
 """)
-        let halaman3 = intro3ViewController(textImage: "pitch", textLabel: "Try it out for yourself!")
+        let halaman3 = intro3ViewController(textImage: "pitch", textLabel: "Try it out for yourself!",subTextLabel: """
+            Drag the yellow pieces
+            to modify this formation!
+""")
+        let halaman4 = introEndViewController(textLabel: "Good Job!", textButton: "Now, let's learn about basic football formations!")
+        let halaman5 = FourFourTwo()
+        let halaman6 = FourTwoThreeOne()
+        let halaman7 = ThreeFiveTwo()
+        let halaman8 = Continuation()
+        let halaman9 = Final(textImage: "pitch", textLabel: "", subTextLabel: "You can check previous page to revisit!")
         pages.append(halaman1)
         pages.append(halaman2)
         pages.append(halaman3)
+        pages.append(halaman4)
+        pages.append(halaman5)
+        pages.append(halaman6)
+        pages.append(halaman7)
+        pages.append(halaman8)
+        pages.append(halaman9)
         setViewControllers([pages[index]], direction: .forward, animated: false, completion: nil)
         
 //        pageSlides.addTarget(self, action: #selector(<#T##@objc method#>), for: .valueChanged)
@@ -86,9 +102,10 @@ extension ViewController: UIPageViewControllerDelegate, UIPageViewControllerData
         guard let index = pages.firstIndex(of: viewController) else { return nil }
 
         if index < pages.count - 1 {
-            return pages[index + 1]  // go next
-        } else {
-            return pages.first              // wrap first
+            return pages[index + 1]
+        }
+        else {
+            return pages.first
         }
     }
     

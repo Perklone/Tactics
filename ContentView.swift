@@ -9,7 +9,7 @@ struct ContentView: View {
 
 struct VCView: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> some UIViewController {
-        return ViewController()
+        return UINavigationController(rootViewController: ViewController()) 
     }
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
         
